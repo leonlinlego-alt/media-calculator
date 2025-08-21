@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>媒體效益計算機</title>
+    <title>媒體效益計算機 (含頻率)</title>
     <!-- 使用 Tailwind CSS CDN 進行快速樣式設計 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,7 @@
         <div class="bg-white rounded-xl shadow-2xl p-8 mb-8">
             <h1 class="text-4xl font-extrabold text-center text-gray-900 mb-2">媒體效益計算機</h1>
             <p class="text-center text-gray-600 mb-6">
-                根據目標受眾、預計觸及率與CPM，快速評估媒體預算。
+                根據目標受眾、預計觸及率、頻率與CPM，快速評估媒體預算。
             </p>
         </div>
 
@@ -55,19 +55,21 @@
                             <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">目標受眾</th>
                             <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">基數人數</th>
                             <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預計觸及率 (%)</th>
+                            <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">頻率</th>
                             <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Display</th>
-                            <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Social</th>
-                            <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Video</th>
+                            <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Social</th>
+                            <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Video</th>
                         </tr>
                         <tr>
                             <th scope="col"></th>
                             <th scope="col"></th>
                             <th scope="col"></th>
+                            <th scope="col"></th>
                             <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CPM</th>
                             <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預算</th>
-                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CPM</th>
+                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">CPM</th>
                             <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預算</th>
-                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CPM</th>
+                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">CPM</th>
                             <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預算</th>
                         </tr>
                     </thead>
@@ -88,19 +90,21 @@
                             <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">目標受眾</th>
                             <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">基數人數</th>
                             <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預計觸及率 (%)</th>
+                            <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">頻率</th>
                             <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Display</th>
-                            <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Social</th>
-                            <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Video</th>
+                            <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Social</th>
+                            <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Video</th>
                         </tr>
                         <tr>
                             <th scope="col"></th>
                             <th scope="col"></th>
                             <th scope="col"></th>
+                            <th scope="col"></th>
                             <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CPM</th>
                             <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預算</th>
-                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CPM</th>
+                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">CPM</th>
                             <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預算</th>
-                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CPM</th>
+                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">CPM</th>
                             <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預算</th>
                         </tr>
                     </thead>
@@ -133,18 +137,22 @@
                 return new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 }).format(num);
             };
 
-            const calculateBudget = (base, reach, cpm) => {
+            const calculateBudget = (base, reach, cpm, frequency) => {
                 const reachValue = parseFloat(reach);
                 const cpmValue = parseFloat(cpm);
-                if (isNaN(reachValue) || isNaN(cpmValue)) return 0;
+                const frequencyValue = parseFloat(frequency);
+
+                if (isNaN(reachValue) || isNaN(cpmValue) || isNaN(frequencyValue) || reachValue < 0 || cpmValue < 0 || frequencyValue < 0) return 0;
+
                 const targetReach = (base * reachValue) / 100;
-                return (targetReach / 1000) * cpmValue;
+                const totalImpressions = targetReach * frequencyValue;
+                return (totalImpressions / 1000) * cpmValue;
             };
 
             const renderTableRows = (country) => {
                 const tbody = document.getElementById(country === 'Hong Kong' ? 'hk-tbody' : 'tw-tbody');
                 if (!tbody) return;
-                tbody.innerHTML = ''; // Clear existing rows
+                tbody.innerHTML = '';
 
                 const filteredAudience = audienceData.filter(item => item.country === country);
                 const currencySymbol = country === 'Taiwan' ? 'NT$' : 'HK$';
@@ -153,6 +161,7 @@
                     const row = document.createElement('tr');
                     const base = audience.base;
 
+                    // --- UPDATED: 在 Social 和 Video 的 <td> 加上 border-l ---
                     row.innerHTML = `
                         <td class="px-3 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${audience.name}</td>
                         <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">${formatNumber(base)}</td>
@@ -160,14 +169,17 @@
                             <input type="number" placeholder="e.g. 50" class="input-field reach-input" data-base="${base}">
                         </td>
                         <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">
+                            <input type="number" placeholder="e.g. 3" class="input-field frequency-input" data-base="${base}">
+                        </td>
+                        <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">
                             <input type="number" placeholder="e.g. 5" class="input-field cpm-input" data-media="display" data-base="${base}">
                         </td>
                         <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-900 font-bold budget-output" data-media="display">${currencySymbol}0</td>
-                        <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500 border-l border-gray-200">
                             <input type="number" placeholder="e.g. 10" class="input-field cpm-input" data-media="social" data-base="${base}">
                         </td>
                         <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-900 font-bold budget-output" data-media="social">${currencySymbol}0</td>
-                        <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500 border-l border-gray-200">
                             <input type="number" placeholder="e.g. 25" class="input-field cpm-input" data-media="video" data-base="${base}">
                         </td>
                         <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-900 font-bold budget-output" data-media="video">${currencySymbol}0</td>
@@ -178,19 +190,18 @@
 
             const updateBudgets = (row) => {
                 const reachInput = row.querySelector('.reach-input');
-                if (!reachInput) return;
+                const frequencyInput = row.querySelector('.frequency-input');
+                if (!reachInput || !frequencyInput) return;
 
-                const reachValue = parseFloat(reachInput.value);
+                const reachValue = reachInput.value;
+                const frequencyValue = frequencyInput.value;
                 const cpmInputs = row.querySelectorAll('.cpm-input');
-                const budgetOutputs = row.querySelectorAll('.budget-output');
                 const base = parseFloat(reachInput.dataset.base);
 
                 cpmInputs.forEach(cpmInput => {
                     const mediaType = cpmInput.dataset.media;
-                    const cpmValue = parseFloat(cpmInput.value);
-
-                    const budget = calculateBudget(base, reachValue, cpmValue);
-
+                    const cpmValue = cpmInput.value;
+                    const budget = calculateBudget(base, reachValue, cpmValue, frequencyValue);
                     const outputElement = row.querySelector(`.budget-output[data-media="${mediaType}"]`);
                     if (outputElement) {
                         const currencySymbol = outputElement.textContent.startsWith('NT') ? 'NT$' : 'HK$';
@@ -203,7 +214,7 @@
                 document.querySelectorAll('.min-w-full tbody').forEach(tbody => {
                     tbody.addEventListener('input', (event) => {
                         const target = event.target;
-                        if (target.classList.contains('reach-input') || target.classList.contains('cpm-input')) {
+                        if (target.classList.contains('reach-input') || target.classList.contains('cpm-input') || target.classList.contains('frequency-input')) {
                             const row = target.closest('tr');
                             if (row) {
                                 updateBudgets(row);
