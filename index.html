@@ -44,73 +44,87 @@
             </p>
         </div>
 
-        <div class="bg-white rounded-xl shadow-lg p-6 mb-8 w-full">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">香港 (Hong Kong)</h2>
-            <div class="overflow-x-auto">
-                <table class="min-w-full divide-y divide-gray-200">
-                    <thead class="bg-gray-50">
-                        <tr>
-                            <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">目標受眾</th>
-                            <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">基數人數</th>
-                            <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預計觸及率 (%)</th>
-                            <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">頻率</th>
-                            <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Display</th>
-                            <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Social</th>
-                            <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Video</th>
-                        </tr>
-                        <tr>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CPM</th>
-                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預算</th>
-                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">CPM</th>
-                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預算</th>
-                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">CPM</th>
-                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預算</th>
-                        </tr>
-                    </thead>
-                    <tbody id="hk-tbody" class="bg-white divide-y divide-gray-200">
+        <div id="calculator-container" class="space-y-8">
+            <!-- Hong Kong Table -->
+            <div class="bg-white rounded-xl shadow-lg p-6 w-full">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">香港 (Hong Kong)</h2>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">目標受眾</th>
+                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">基數人數</th>
+                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預計觸及率 (%)</th>
+                                <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Display</th>
+                                <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Social</th>
+                                <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Video</th>
+                                <th scope="col" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">操作</th>
+                            </tr>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CPM</th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">頻率</th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">CPM</th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">頻率</th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">CPM</th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">頻率</th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="hk-tbody" class="bg-white divide-y divide-gray-200">
                         </tbody>
-                </table>
+                    </table>
+                </div>
+                <div class="mt-4 text-center">
+                    <button id="add-hk-row-btn" class="bg-blue-100 text-blue-800 font-bold py-2 px-4 rounded-lg hover:bg-blue-200 transition-colors duration-200 ease-in-out">
+                        新增受眾 ➕
+                    </button>
+                </div>
+            </div>
+
+            <!-- Taiwan Table -->
+            <div class="bg-white rounded-xl shadow-lg p-6 w-full">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">台灣 (Taiwan)</h2>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">目標受眾</th>
+                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">基數人數</th>
+                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預計觸及率 (%)</th>
+                                <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Display</th>
+                                <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Social</th>
+                                <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Video</th>
+                                <th scope="col" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">操作</th>
+                            </tr>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CPM</th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">頻率</th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">CPM</th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">頻率</th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">CPM</th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">頻率</th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tw-tbody" class="bg-white divide-y divide-gray-200">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-4 text-center">
+                    <button id="add-tw-row-btn" class="bg-blue-100 text-blue-800 font-bold py-2 px-4 rounded-lg hover:bg-blue-200 transition-colors duration-200 ease-in-out">
+                        新增受眾 ➕
+                    </button>
+                </div>
             </div>
         </div>
 
-        <div class="bg-white rounded-xl shadow-lg p-6 mb-8 w-full">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">台灣 (Taiwan)</h2>
-            <div class="overflow-x-auto">
-                <table class="min-w-full divide-y divide-gray-200">
-                    <thead class="bg-gray-50">
-                        <tr>
-                            <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">目標受眾</th>
-                            <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">基數人數</th>
-                            <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預計觸及率 (%)</th>
-                            <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">頻率</th>
-                            <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Display</th>
-                            <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Social</th>
-                            <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Video</th>
-                        </tr>
-                        <tr>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CPM</th>
-                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預算</th>
-                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">CPM</th>
-                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預算</th>
-                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">CPM</th>
-                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預算</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tw-tbody" class="bg-white divide-y divide-gray-200">
-                        </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+        <div class="bg-white rounded-xl shadow-lg p-6 text-center mt-8">
             <button id="download-csv-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 ease-in-out">
                 下載為 CSV 📊
             </button>
@@ -134,7 +148,7 @@
             ];
 
             const formatNumber = (num) => {
-                if (num === null || isNaN(num)) return '0';
+                if (num === null || isNaN(num) || num === Infinity) return '0';
                 return new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 }).format(num);
             };
 
@@ -150,63 +164,98 @@
                 return (totalImpressions / 1000) * cpmValue;
             };
 
-            const renderTableRows = (country) => {
+            const createNewRow = (country, audienceName = '新受眾', baseAudience = '') => {
                 const tbody = document.getElementById(country === 'Hong Kong' ? 'hk-tbody' : 'tw-tbody');
                 if (!tbody) return;
-                tbody.innerHTML = '';
 
-                const filteredAudience = audienceData.filter(item => item.country === country);
                 const currencySymbol = country === 'Taiwan' ? 'NT$' : 'HK$';
+                
+                const row = document.createElement('tr');
+                row.className = 'hover:bg-gray-100 transition-colors duration-150 ease-in-out';
+                row.innerHTML = `
+                    <td class="px-3 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        ${audienceName === '新受眾' ? `<input type="text" value="${audienceName}" class="input-field w-auto" placeholder="受眾名稱">` : audienceName}
+                    </td>
+                    <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">
+                        ${baseAudience !== '' ? formatNumber(baseAudience) : `<input type="number" placeholder="人數" class="input-field base-input w-24">`}
+                    </td>
+                    <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <input type="number" placeholder="e.g. 50" class="input-field reach-input">
+                    </td>
+                    <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <input type="number" placeholder="e.g. 5" class="input-field cpm-input" data-media="display">
+                    </td>
+                    <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <input type="number" placeholder="e.g. 3" class="input-field frequency-input" data-media="display">
+                    </td>
+                    <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-900 font-bold budget-output" data-media="display">${currencySymbol}0</td>
+                    <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500 border-l border-gray-200">
+                        <input type="number" placeholder="e.g. 10" class="input-field cpm-input" data-media="social">
+                    </td>
+                    <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <input type="number" placeholder="e.g. 3" class="input-field frequency-input" data-media="social">
+                    </td>
+                    <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-900 font-bold budget-output" data-media="social">${currencySymbol}0</td>
+                    <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500 border-l border-gray-200">
+                        <input type="number" placeholder="e.g. 25" class="input-field cpm-input" data-media="video">
+                    </td>
+                    <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <input type="number" placeholder="e.g. 3" class="input-field frequency-input" data-media="video">
+                    </td>
+                    <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-900 font-bold budget-output" data-media="video">${currencySymbol}0</td>
+                    <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500 text-center">
+                        <button class="remove-row-btn text-red-500 hover:text-red-700">移除</button>
+                    </td>
+                `;
+                tbody.appendChild(row);
 
-                filteredAudience.forEach((audience) => {
-                    const row = document.createElement('tr');
-                    const base = audience.base;
+                // Add event listeners for the new row
+                const newRow = tbody.lastElementChild;
+                const baseInput = newRow.querySelector('.base-input');
+                const reachInput = newRow.querySelector('.reach-input');
+                const mediaInputs = newRow.querySelectorAll('[data-media]');
 
-                    row.innerHTML = `
-                        <td class="px-3 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${audience.name}</td>
-                        <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">${formatNumber(base)}</td>
-                        <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">
-                            <input type="number" placeholder="e.g. 50" class="input-field reach-input" data-base="${base}">
-                        </td>
-                        <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">
-                            <input type="number" placeholder="e.g. 3" class="input-field frequency-input" data-base="${base}">
-                        </td>
-                        <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">
-                            <input type="number" placeholder="e.g. 5" class="input-field cpm-input" data-media="display" data-base="${base}">
-                        </td>
-                        <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-900 font-bold budget-output" data-media="display">${currencySymbol}0</td>
-                        <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500 border-l border-gray-200">
-                            <input type="number" placeholder="e.g. 10" class="input-field cpm-input" data-media="social" data-base="${base}">
-                        </td>
-                        <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-900 font-bold budget-output" data-media="social">${currencySymbol}0</td>
-                        <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500 border-l border-gray-200">
-                            <input type="number" placeholder="e.g. 25" class="input-field cpm-input" data-media="video" data-base="${base}">
-                        </td>
-                        <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-900 font-bold budget-output" data-media="video">${currencySymbol}0</td>
-                    `;
-                    tbody.appendChild(row);
+                const updateRowBudgets = () => {
+                    let baseValue = baseAudience;
+                    if (baseInput) {
+                        baseValue = parseFloat(baseInput.value);
+                    }
+                    if (isNaN(baseValue) || baseValue <= 0) {
+                        newRow.querySelectorAll('.budget-output').forEach(el => el.textContent = `${currencySymbol}0`);
+                        return;
+                    }
+                    const reachValue = parseFloat(reachInput.value);
+                    
+                    ['display', 'social', 'video'].forEach(mediaType => {
+                        const cpmInput = newRow.querySelector(`.cpm-input[data-media="${mediaType}"]`);
+                        const frequencyInput = newRow.querySelector(`.frequency-input[data-media="${mediaType}"]`);
+                        const cpmValue = parseFloat(cpmInput.value);
+                        const frequencyValue = parseFloat(frequencyInput.value);
+                        
+                        const budget = calculateBudget(baseValue, reachValue, cpmValue, frequencyValue);
+                        const outputElement = newRow.querySelector(`.budget-output[data-media="${mediaType}"]`);
+                        if (outputElement) {
+                            outputElement.textContent = `${currencySymbol}${formatNumber(budget)}`;
+                        }
+                    });
+                };
+                
+                if (baseInput) {
+                    baseInput.addEventListener('input', updateRowBudgets);
+                }
+                reachInput.addEventListener('input', updateRowBudgets);
+                mediaInputs.forEach(input => input.addEventListener('input', updateRowBudgets));
+                
+                const removeBtn = newRow.querySelector('.remove-row-btn');
+                removeBtn.addEventListener('click', () => {
+                    newRow.remove();
                 });
             };
 
-            const updateBudgets = (row) => {
-                const reachInput = row.querySelector('.reach-input');
-                const frequencyInput = row.querySelector('.frequency-input');
-                if (!reachInput || !frequencyInput) return;
-
-                const reachValue = reachInput.value;
-                const frequencyValue = frequencyInput.value;
-                const cpmInputs = row.querySelectorAll('.cpm-input');
-                const base = parseFloat(reachInput.dataset.base);
-
-                cpmInputs.forEach(cpmInput => {
-                    const mediaType = cpmInput.dataset.media;
-                    const cpmValue = cpmInput.value;
-                    const budget = calculateBudget(base, reachValue, cpmValue, frequencyValue);
-                    const outputElement = row.querySelector(`.budget-output[data-media="${mediaType}"]`);
-                    if (outputElement) {
-                        const currencySymbol = outputElement.textContent.startsWith('NT') ? 'NT$' : 'HK$';
-                        outputElement.textContent = `${currencySymbol}${formatNumber(budget)}`;
-                    }
+            const renderInitialRows = (country) => {
+                const filteredAudience = audienceData.filter(item => item.country === country);
+                filteredAudience.forEach((audience) => {
+                    createNewRow(country, audience.name, audience.base);
                 });
             };
 
@@ -219,7 +268,7 @@
                 let csvContent = "data:text/csv;charset=utf-8,\uFEFF"; // \uFEFF for UTF-8 BOM
                 
                 // CSV header
-                const header = "地區,目標受眾,基數人數,預計觸及率(%),頻率,Display CPM,Display 預算,Social CPM,Social 預算,Video CPM,Video 預算\n";
+                const header = "地區,目標受眾,基數人數,預計觸及率(%),Display CPM,Display 頻率,Display 預算,Social CPM,Social 頻率,Social 預算,Video CPM,Video 頻率,Video 預算\n";
                 csvContent += header;
 
                 const tables = [
@@ -233,30 +282,34 @@
 
                     const rows = tbody.querySelectorAll('tr');
                     rows.forEach(row => {
-                        const audienceName = row.querySelector('td:nth-child(1)').textContent.trim();
-                        const baseAudience = row.querySelector('td:nth-child(2)').textContent.trim();
+                        const audienceName = row.querySelector('td:nth-child(1) input') ? row.querySelector('td:nth-child(1) input').value : row.querySelector('td:nth-child(1)').textContent.trim();
+                        const baseAudience = row.querySelector('.base-input') ? row.querySelector('.base-input').value : row.querySelector('td:nth-child(2)').textContent.trim().replace(/,/g, '');
                         const reach = row.querySelector('.reach-input').value;
-                        const frequency = row.querySelector('.frequency-input').value;
-                        const displayCpm = row.querySelector('input[data-media="display"]').value;
-                        const displayBudget = row.querySelector('td[data-media="display"]').textContent.trim();
-                        const socialCpm = row.querySelector('input[data-media="social"]').value;
-                        const socialBudget = row.querySelector('td[data-media="social"]').textContent.trim();
-                        const videoCpm = row.querySelector('input[data-media="video"]').value;
-                        const videoBudget = row.querySelector('td[data-media="video"]').textContent.trim();
+                        const displayCpm = row.querySelector('input[data-media="display"].cpm-input').value;
+                        const displayFrequency = row.querySelector('input[data-media="display"].frequency-input').value;
+                        const displayBudget = row.querySelector('td[data-media="display"].budget-output').textContent.trim();
+                        const socialCpm = row.querySelector('input[data-media="social"].cpm-input').value;
+                        const socialFrequency = row.querySelector('input[data-media="social"].frequency-input').value;
+                        const socialBudget = row.querySelector('td[data-media="social"].budget-output').textContent.trim();
+                        const videoCpm = row.querySelector('input[data-media="video"].cpm-input').value;
+                        const videoFrequency = row.querySelector('input[data-media="video"].frequency-input').value;
+                        const videoBudget = row.querySelector('td[data-media="video"].budget-output').textContent.trim();
                         
                         const rowData = [
                             tableInfo.country,
                             audienceName,
                             baseAudience,
                             reach,
-                            frequency,
                             displayCpm,
+                            displayFrequency,
                             displayBudget,
                             socialCpm,
+                            socialFrequency,
                             socialBudget,
                             videoCpm,
+                            videoFrequency,
                             videoBudget
-                        ].map(data => `"${data.replace(/"/g, '""')}"`).join(','); // 處理包含逗號或引號的字串
+                        ].map(data => `"${(data + '').replace(/"/g, '""')}"`).join(',');
                         
                         csvContent += rowData + "\n";
                     });
@@ -271,28 +324,16 @@
                 document.body.removeChild(link);
             };
 
-            const setupEventListeners = () => {
-                document.querySelectorAll('.min-w-full tbody').forEach(tbody => {
-                    tbody.addEventListener('input', (event) => {
-                        const target = event.target;
-                        if (target.classList.contains('reach-input') || target.classList.contains('cpm-input') || target.classList.contains('frequency-input')) {
-                            const row = target.closest('tr');
-                            if (row) {
-                                updateBudgets(row);
-                            }
-                        }
-                    });
-                });
-                
-                // 監聽下載按鈕的點擊事件
-                document.getElementById('download-csv-btn').addEventListener('click', exportToCsv);
-            };
-
             // Initial render and setup
-            renderTableRows('Hong Kong');
-            renderTableRows('Taiwan');
-            setupEventListeners();
+            renderInitialRows('Hong Kong');
+            renderInitialRows('Taiwan');
+            
+            // Event listeners for adding rows
+            document.getElementById('add-hk-row-btn').addEventListener('click', () => createNewRow('Hong Kong'));
+            document.getElementById('add-tw-row-btn').addEventListener('click', () => createNewRow('Taiwan'));
+            document.getElementById('download-csv-btn').addEventListener('click', exportToCsv);
         });
     </script>
 </body>
 </html>
+
