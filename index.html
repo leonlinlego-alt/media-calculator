@@ -9,9 +9,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* 使用樂高經典配色 */
+        :root {
+            --lego-red: #DD1E26;
+            --lego-yellow: #FFC20A;
+            --lego-blue: #004889;
+            --lego-green: #4C9900;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
+            background-color: #f0f0f0; /* 淺灰色背景，讓樂高顏色更突出 */
             color: #1f2937;
         }
         .container {
@@ -30,8 +38,42 @@
         }
         .input-field:focus {
             outline: none;
-            border-color: #6366f1;
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.5);
+            border-color: var(--lego-blue);
+            box-shadow: 0 0 0 3px rgba(0, 72, 137, 0.5);
+        }
+
+        /* 按鈕樣式 */
+        .add-btn {
+            background-color: var(--lego-yellow);
+            color: #1f2937;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .add-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        .download-btn {
+            background-color: var(--lego-red);
+            color: white;
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        .remove-btn {
+            color: var(--lego-red);
+        }
+        .remove-btn:hover {
+            color: #b2181f;
         }
     </style>
 </head>
@@ -50,14 +92,14 @@
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">香港 (Hong Kong)</h2>
                 <div class="overflow-x-auto">
                     <table class="min-w-full divide-y divide-gray-200">
-                        <thead class="bg-gray-50">
+                        <thead class="bg-gray-100">
                             <tr>
                                 <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">目標受眾</th>
                                 <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">基數人數</th>
                                 <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預計觸及率 (%)</th>
-                                <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Display</th>
-                                <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Social</th>
-                                <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Video</th>
+                                <th scope="col" colspan="3" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Display</th>
+                                <th scope="col" colspan="3" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Social</th>
+                                <th scope="col" colspan="3" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Video</th>
                                 <th scope="col" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">操作</th>
                             </tr>
                             <tr>
@@ -66,10 +108,13 @@
                                 <th scope="col"></th>
                                 <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CPM</th>
                                 <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">頻率</th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預算</th>
                                 <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">CPM</th>
                                 <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">頻率</th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預算</th>
                                 <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">CPM</th>
                                 <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">頻率</th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預算</th>
                                 <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
                             </tr>
                         </thead>
@@ -78,7 +123,7 @@
                     </table>
                 </div>
                 <div class="mt-4 text-center">
-                    <button id="add-hk-row-btn" class="bg-blue-100 text-blue-800 font-bold py-2 px-4 rounded-lg hover:bg-blue-200 transition-colors duration-200 ease-in-out">
+                    <button id="add-hk-row-btn" class="add-btn">
                         新增受眾 ➕
                     </button>
                 </div>
@@ -89,14 +134,14 @@
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">台灣 (Taiwan)</h2>
                 <div class="overflow-x-auto">
                     <table class="min-w-full divide-y divide-gray-200">
-                        <thead class="bg-gray-50">
+                        <thead class="bg-gray-100">
                             <tr>
                                 <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">目標受眾</th>
                                 <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">基數人數</th>
                                 <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預計觸及率 (%)</th>
-                                <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Display</th>
-                                <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Social</th>
-                                <th scope="col" colspan="2" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Video</th>
+                                <th scope="col" colspan="3" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Display</th>
+                                <th scope="col" colspan="3" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Social</th>
+                                <th scope="col" colspan="3" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">Video</th>
                                 <th scope="col" class="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">操作</th>
                             </tr>
                             <tr>
@@ -105,10 +150,13 @@
                                 <th scope="col"></th>
                                 <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CPM</th>
                                 <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">頻率</th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預算</th>
                                 <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">CPM</th>
                                 <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">頻率</th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預算</th>
                                 <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-l border-gray-200">CPM</th>
                                 <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">頻率</th>
+                                <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">預算</th>
                                 <th scope="col" class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
                             </tr>
                         </thead>
@@ -117,7 +165,7 @@
                     </table>
                 </div>
                 <div class="mt-4 text-center">
-                    <button id="add-tw-row-btn" class="bg-blue-100 text-blue-800 font-bold py-2 px-4 rounded-lg hover:bg-blue-200 transition-colors duration-200 ease-in-out">
+                    <button id="add-tw-row-btn" class="add-btn">
                         新增受眾 ➕
                     </button>
                 </div>
@@ -125,7 +173,7 @@
         </div>
 
         <div class="bg-white rounded-xl shadow-lg p-6 text-center mt-8">
-            <button id="download-csv-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 ease-in-out">
+            <button id="download-csv-btn" class="download-btn">
                 下載為 CSV 📊
             </button>
         </div>
@@ -204,7 +252,7 @@
                     </td>
                     <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-900 font-bold budget-output" data-media="video">${currencySymbol}0</td>
                     <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500 text-center">
-                        <button class="remove-row-btn text-red-500 hover:text-red-700">移除</button>
+                        <button class="remove-row-btn remove-btn">移除</button>
                     </td>
                 `;
                 tbody.appendChild(row);
@@ -336,4 +384,3 @@
     </script>
 </body>
 </html>
-
